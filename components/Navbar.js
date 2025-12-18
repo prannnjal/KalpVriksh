@@ -8,8 +8,11 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="px-4 md:px-6 py-4" style={{ backgroundColor: '#2B5271' }}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <nav
+      className="sticky top-0 z-50 px-4 md:px-8 lg:px-16 py-4"
+      style={{ backgroundColor: '#2B5271' }}
+    >
+      <div className="w-full flex items-center justify-between gap-4">
         {/* Logo and School Name */}
         <div className="flex items-center gap-3 md:gap-4">
           <div className="w-12 h-12 md:w-16 md:h-16 relative flex-shrink-0">
@@ -36,30 +39,30 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-          <Link href="/" className="text-white hover:text-yellow-300 transition-colors">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1 justify-center">
+          <Link href="/" className="text-white hover:text-yellow-300 transition-colors whitespace-nowrap">
             Home
           </Link>
-          <Link href="/about" className="text-white hover:text-yellow-300 transition-colors">
+          <Link href="/about" className="text-white hover:text-yellow-300 transition-colors whitespace-nowrap">
             About
           </Link>
-          <Link href="/academics" className="text-white hover:text-yellow-300 transition-colors">
+          <Link href="/academics" className="text-white hover:text-yellow-300 transition-colors whitespace-nowrap">
             Academics
           </Link>
-          <Link href="/admission" className="text-white hover:text-yellow-300 transition-colors">
+          <Link href="/admission" className="text-white hover:text-yellow-300 transition-colors whitespace-nowrap">
             Admission
           </Link>
-          <Link href="/gallery" className="text-white hover:text-yellow-300 transition-colors">
+          <Link href="/gallery" className="text-white hover:text-yellow-300 transition-colors whitespace-nowrap">
             Gallery
           </Link>
-          <Link href="/mandatory-disclosure" className="text-white hover:text-yellow-300 transition-colors">
+          <Link href="/mandatory-disclosure" className="text-white hover:text-yellow-300 transition-colors whitespace-nowrap">
             Mandatory Disclosure
           </Link>
         </div>
 
         {/* Desktop Enquire Button */}
         <button 
-          className="hidden lg:block text-white font-semibold"
+          className="hidden lg:block text-white font-semibold flex-shrink-0"
           style={{
             backgroundColor: '#FFB606',
             width: '122px',

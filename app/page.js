@@ -1,6 +1,14 @@
 import HeroSection from '../components/HeroSection'
+import AboutSection from '../components/AboutSection'
+import WhyChooseSection from '../components/WhyChooseSection'
 
 export default function Home() {
-  return <HeroSection />
+  return (
+    <>
+      <HeroSection />
+      <AboutSection />
+      <WhyChooseSection />
+    </>
+  )
 }
 

@@ -1,13 +1,26 @@
 export default function HeroSection() {
   return (
-    <main
-      className="min-h-screen text-white flex items-center"
-      style={{
-        backgroundImage:
-          'linear-gradient(90deg, #2b5271 0%, #0f2538 45%, #02060a 100%)',
-      }}
-    >
-      <div className="max-w-5xl px-6 sm:px-10 lg:px-20 py-16 md:py-24 flex flex-col gap-8">
+    <main className="relative h-screen text-white flex items-center overflow-hidden">
+      {/* Background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/KalpvrikshTRIM.webm"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+
+      {/* Gradient overlay for readability */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            'linear-gradient(90deg, rgba(57, 109, 150, 0.85) 0%, rgba(0, 0, 0, 0.55) 100%)',
+        }}
+      />
+
+      <div className="relative z-10 max-w-5xl px-4 md:px-8 lg:px-16 py-16 md:py-24 flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <p
             className="text-white/80"
