@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import StatsStrip from './StatsStrip'
 
 const cards = [
   {
@@ -41,15 +42,16 @@ const cards = [
 
 export default function WhyChooseSection() {
   return (
-    <section
-      className="relative overflow-hidden bg-[#2B5271] text-white px-4 md:px-8 lg:px-16 pt-16 pb-0"
-      style={{
-        backgroundImage: `url("/image 11.png")`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
+    <>
+      <section
+        className="relative overflow-hidden bg-[#2B5271] text-white px-4 md:px-8 lg:px-16 pt-16 pb-0"
+        style={{
+          backgroundImage: `url("/image 11.png")`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
       <div className="relative max-w-6xl lg:max-w-7xl mx-auto flex flex-col items-center text-center gap-8">
         <div className="space-y-3 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold">Why Choose Kalp Vriksh?</h2>
@@ -90,7 +92,10 @@ export default function WhyChooseSection() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+
+      <StatsStrip />
+    </>
   )
 }
 
