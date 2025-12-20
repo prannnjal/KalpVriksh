@@ -2,10 +2,10 @@ import PhotoGallery from './PhotoGallery'
 import VideoGallery from './VideoGallery'
 
 const samplePhotos = [
-  '/gallery/photo1.jpg',
-  '/gallery/photo2.jpg',
-  '/gallery/photo3.jpg',
-  '/gallery/photo4.jpg',
+  '/Rectangle 1019.png',
+  '/Rectangle 1020.png',
+  '/Rectangle 1021.png',
+  '/Rectangle 1022.png',
 ]
 
 const sampleVideos = [
