@@ -53,7 +53,7 @@ export default function WhyChooseSection() {
         }}
       >
       <div className="relative max-w-6xl lg:max-w-7xl mx-auto flex flex-col items-center text-center gap-6 sm:gap-8">
-        <div className="space-y-2 sm:space-y-3 max-w-4xl px-2 sm:px-0">
+        <div className="space-y-2 sm:space-y-3 max-w-5xl lg:max-w-6xl px-2 sm:px-0">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Why Choose Kalp Vriksh?</h2>
           <p className="text-xs sm:text-sm md:text-base text-white/90 leading-relaxed">
             Choose Kalpvriksh Public School for its commitment to holistic development, a progressive curriculum,
@@ -98,12 +98,12 @@ function Card({ title, body, cta, accent, bg, align = 'left', isFirst = false, i
     <div
       className={`relative w-full text-gray-800 px-6 sm:px-7 md:px-8 py-6 sm:py-7 md:py-8 flex flex-col justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] ${
         align === 'right' ? 'text-right items-end' : 'text-left items-start'
-      } overflow-hidden rounded-lg sm:rounded-xl ${isFirst ? 'md:rounded-tl-[60px] lg:rounded-tl-[90px]' : ''} ${isSecond ? 'md:rounded-bl-[60px] lg:rounded-bl-[90px]' : ''} ${isThird ? 'md:rounded-tr-[60px] lg:rounded-tr-[90px]' : ''} ${isFourth ? 'md:rounded-br-[60px] lg:rounded-br-[90px]' : ''}`}
+      } overflow-hidden ${isSecond || isThird || isFourth ? 'bg-white' : ''} ${isFirst ? 'md:rounded-br-[160px]' : ''} ${isSecond ? 'md:rounded-tr-[160px] md:rounded-bl-[0]' : ''} ${isThird ? 'md:rounded-bl-[160px]' : ''} ${isFourth ? 'md:rounded-tl-[160px]' : ''}`}
     >
         <div
-          className={`absolute inset-0 pointer-events-none rounded-lg sm:rounded-xl ${isFirst ? 'md:rounded-tl-[60px] lg:rounded-tl-[90px]' : ''} ${isSecond ? 'md:rounded-bl-[60px] lg:rounded-bl-[90px]' : ''} ${isThird ? 'md:rounded-tr-[60px] lg:rounded-tr-[90px]' : ''} ${isFourth ? 'md:rounded-br-[60px] lg:rounded-br-[90px]' : ''}`}
+          className={`absolute inset-0 pointer-events-none ${isFirst ? 'md:rounded-br-[160px]' : ''} ${isSecond ? 'md:rounded-tr-[160px] md:rounded-bl-[0]' : ''} ${isThird ? 'md:rounded-bl-[160px]' : ''} ${isFourth ? 'md:rounded-tl-[160px]' : ''}`}
         style={{
-          backgroundImage: `url("${bg}")`,
+          backgroundImage: isSecond || isThird || isFourth ? 'none' : `url("${bg}")`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
