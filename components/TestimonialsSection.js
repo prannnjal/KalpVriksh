@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
             What Parents Say
           </h2>
           <p className="text-gray-600 text-xs sm:text-sm md:text-base px-2 sm:px-0">
-            We are proud of the community we've built. Hear from the families who are part of our journey.
+            We are proud of the community we&apos;ve built. Hear from the families who are part of our journey.
           </p>
         </div>
 
