@@ -23,22 +23,26 @@ const testimonials = [
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [testimonialsPerSlide, setTestimonialsPerSlide] = useState(2)
+  const [borderRadius, setBorderRadius] = useState(120)
 
   useEffect(() => {
-    const updateTestimonialsPerSlide = () => {
-      const newPerSlide = window.innerWidth >= 768 ? 2 : 1
-      setTestimonialsPerSlide(newPerSlide)
+    const updateResponsiveValues = () => {
+      const isMobile = window.innerWidth < 768
+      setTestimonialsPerSlide(isMobile ? 1 : 2)
+      setBorderRadius(isMobile ? 60 : 120)
       // Reset to first slide when switching between mobile/desktop
-      setCurrentIndex(0)
+      if (isMobile !== (testimonialsPerSlide === 1)) {
+        setCurrentIndex(0)
+      }
     }
 
     // Set initial value
-    updateTestimonialsPerSlide()
+    updateResponsiveValues()
 
     // Update on resize
-    window.addEventListener('resize', updateTestimonialsPerSlide)
-    return () => window.removeEventListener('resize', updateTestimonialsPerSlide)
-  }, [])
+    window.addEventListener('resize', updateResponsiveValues)
+    return () => window.removeEventListener('resize', updateResponsiveValues)
+  }, [testimonialsPerSlide])
 
   const goToSlide = (index) => {
     setCurrentIndex(index)
@@ -72,10 +76,10 @@ export default function TestimonialsSection() {
                 className="bg-white p-4 sm:p-5 md:p-6 border-2 relative"
                 style={{
                   borderColor: '#A8C5E0',
-                  borderTopLeftRadius: '120px',
+                  borderTopLeftRadius: `${borderRadius}px`,
                   borderTopRightRadius: '0',
                   borderBottomLeftRadius: '0',
-                  borderBottomRightRadius: '120px',
+                  borderBottomRightRadius: `${borderRadius}px`,
                 }}
               >
                 <div className="text-center">

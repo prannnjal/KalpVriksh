@@ -99,7 +99,7 @@ function Card({ title, body, cta, accent, bg, align = 'left', isFirst = false, i
     <div
       className={`relative w-full text-gray-800 px-6 sm:px-7 md:px-8 py-6 sm:py-7 md:py-10 flex flex-col justify-start gap-3 sm:gap-4 md:gap-5 lg:gap-6 h-[280px] sm:h-[300px] md:h-[380px] lg:h-[340px] ${
         align === 'right' ? 'text-right items-end' : 'text-left items-start'
-      } overflow-hidden ${isSecond || isThird || isFourth ? 'bg-white' : ''} ${isFirst ? 'md:rounded-br-[160px]' : ''} ${isSecond ? 'md:rounded-tr-[160px] md:rounded-bl-[0]' : ''} ${isThird ? 'md:rounded-bl-[160px]' : ''} ${isFourth ? 'md:rounded-tl-[160px]' : ''}`}
+      } overflow-hidden ${isFirst ? 'bg-white md:bg-transparent' : ''} ${isSecond || isThird || isFourth ? 'bg-white' : ''} ${isFirst ? 'md:rounded-br-[160px]' : ''} ${isSecond ? 'md:rounded-tr-[160px] md:rounded-bl-[0]' : ''} ${isThird ? 'md:rounded-bl-[160px]' : ''} ${isFourth ? 'md:rounded-tl-[160px]' : ''}`}
     >
         <div
           className={`absolute inset-0 pointer-events-none ${isFirst ? 'md:rounded-br-[160px]' : ''} ${isSecond ? 'md:rounded-tr-[160px] md:rounded-bl-[0]' : ''} ${isThird ? 'md:rounded-bl-[160px]' : ''} ${isFourth ? 'md:rounded-tl-[160px]' : ''}`}
